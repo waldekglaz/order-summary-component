@@ -1,0 +1,132 @@
+$clr-paleBlue: hsl(225, 100%, 98%);
+$clr-brightBlue: hsl(245, 75%, 52%);
+$clr-veryPaleBlue: hsl(225, 100%, 98%);
+$clr-desaturatedBlue: hsl(224, 23%, 55%);
+$clr-darkBlue: hsl(223, 47%, 23%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    background-image: url("../images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Red Hat Display', sans-serif;
+    color: $clr-desaturatedBlue;
+    background-color: $clr-veryPaleBlue;
+}
+
+.card{
+    max-width: 86%;
+    margin: 4rem auto;
+    border-radius:1rem;
+    text-align: center;
+    background-color: #fff;
+}
+.header{
+    img{
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+    }  
+}
+.content{
+    padding:2rem;
+    h2{
+        margin-bottom: 1rem;
+        font-weight: 900;
+        color: $clr-darkBlue;
+    }
+    p{
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+}
+.plan-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 1rem ;
+    background-color: $clr-veryPaleBlue;
+    border-radius: 10px;
+    .plan{
+        margin-left: -1rem;
+        .plan-type{
+            font-weight: 900;
+            color: $clr-darkBlue;
+        }
+    }
+    .plan-change{
+        background: none;
+        border: none;
+        color: $clr-brightBlue;
+        font-weight: 900;
+        text-decoration: underline;
+        text-decoration-color: $clr-darkBlue;
+        cursor: pointer;
+    }
+}
+.payment{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius:10px;
+    border: solid 1px $clr-brightBlue;
+    background-color: $clr-brightBlue;
+    color: $clr-veryPaleBlue;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 20px $clr-desaturatedBlue;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+     &:hover{
+         background-color: $clr-desaturatedBlue;
+         border-color: $clr-desaturatedBlue;
+     }
+}
+.cancel-order{
+    background: none;
+    border: none;
+    font-weight: 900;
+    color: $clr-desaturatedBlue;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+    &:hover{
+        color: $clr-darkBlue;
+    }
+}
+.attribution{
+    text-align: center;
+    color: $clr-desaturatedBlue;
+    a{
+        color: $clr-darkBlue;
+    }
+}
+
+@media(max-width:320px){
+    .content{
+        padding: 0.5rem;
+    }
+}
+
+@media(min-width:768px) {
+    .body{
+        background-image: url("../images/pattern-background-desktop.svg");
+    }
+    .card{
+        max-width: 40%;
+    }
+}
+@media(min-width:1024px) {
+    .card{
+        margin-top: 8rem;
+        width: 30%;
+    }
+}
+@media(min-width:2560px) {
+    .card{
+        width: 400px;
+    }
+}
